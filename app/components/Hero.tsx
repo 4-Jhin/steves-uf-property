@@ -26,20 +26,19 @@ export default function Hero() {
           </h1>
         </div>
 
-        {/* House image — overlaid on the text, top of image cuts into the heading */}
+        {/* House image — anchored at bottom, sized so roof overlaps the heading */}
         <div
-          className="absolute pointer-events-none"
-          style={{ zIndex: 10, left: 0, right: 0, bottom: 0, top: "-10%" }}
+          className="absolute bottom-0 left-1/2 -translate-x-1/2 pointer-events-none"
+          style={{ zIndex: 10, width: "80vw", maxWidth: "860px" }}
         >
-          <div className="relative w-full max-w-3xl mx-auto h-full">
-            <Image
-              src="/house.png"
-              alt="Modern investment property"
-              fill
-              style={{ objectFit: "contain", objectPosition: "center bottom" }}
-              priority
-            />
-          </div>
+          <Image
+            src="/house.png"
+            alt="Modern investment property"
+            width={1500}
+            height={1500}
+            className="w-full h-auto"
+            priority
+          />
         </div>
 
         {/* Bottom row */}
