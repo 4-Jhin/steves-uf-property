@@ -60,7 +60,7 @@ export default function Hero() {
         </div>
 
         {/* House graphic — overlapping the text */}
-        <div className="absolute bottom-0 left-0 right-0 pointer-events-none" style={{ zIndex: 10, height: "55vh", minHeight: "320px" }}>
+        <div className="absolute left-0 right-0 pointer-events-none" style={{ zIndex: 10, height: "55vh", minHeight: "320px", bottom: "12%" }}>
           <HouseGraphic className="w-full h-full" />
         </div>
 
