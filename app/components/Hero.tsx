@@ -60,8 +60,8 @@ export default function Hero() {
         </div>
 
         {/* House graphic — overlapping the text */}
-        <div className="absolute bottom-0 left-0 right-0 pointer-events-none" style={{ zIndex: 10 }}>
-          <HouseGraphic className="w-full" style={{ height: "55vh", minHeight: "320px" }} />
+        <div className="absolute bottom-0 left-0 right-0 pointer-events-none" style={{ zIndex: 10, height: "55vh", minHeight: "320px" }}>
+          <HouseGraphic className="w-full h-full" />
         </div>
 
         <div className="relative z-20 mt-auto px-8 pb-12 pt-[45vh] flex items-end justify-between">
