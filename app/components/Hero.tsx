@@ -80,7 +80,7 @@ export default function Hero() {
         {/* House image — anchored at bottom center */}
         <div
           className="absolute bottom-0 left-1/2 -translate-x-1/2 pointer-events-none"
-          style={{ zIndex: 10, width: "80vw", maxWidth: "860px" }}
+          style={{ zIndex: 10, width: "75vw", maxWidth: "800px", marginBottom: "-4%" }}
         >
           <Image
             src="/house.png"
