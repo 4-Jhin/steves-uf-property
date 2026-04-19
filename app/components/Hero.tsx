@@ -65,7 +65,7 @@ export default function Hero() {
         </div>
 
         <div className="relative z-20 mt-auto px-8 pb-12 pt-[45vh] flex items-end justify-between">
-          <div className="flex flex-col gap-3 max-w-xs" style={{ transform: "translateY(8rem)" }}>
+          <div className="flex flex-col gap-3 max-w-xs" style={{ transform: "translateY(4rem)" }}>
             <p className="text-xs text-[#111111]/60 leading-snug">
               Start your journey towards property investment today.
             </p>
