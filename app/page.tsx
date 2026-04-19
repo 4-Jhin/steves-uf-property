@@ -16,8 +16,8 @@ export default function Home() {
         <About />
         <HowItWorks />
         <DealTypes />
-        <FocusAreas />
         <Register />
+        <FocusAreas />
       </main>
       <Footer />
     </>
