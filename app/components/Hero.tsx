@@ -41,7 +41,7 @@ export default function Hero() {
         </div>
 
         {/* Bottom content */}
-        <div className="relative z-20 mt-auto px-6 pb-10 pt-[50vw] md:pt-[35vh]">
+        <div className="relative z-20 mt-auto px-6 pb-10 pt-[80vw] md:pt-[35vh]">
           {/* Mobile: stacked. Desktop: side by side */}
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
             {/* CTA */}
