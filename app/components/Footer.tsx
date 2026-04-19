@@ -13,7 +13,18 @@ const links = [
 
 export default function Footer() {
   const [email, setEmail] = useState("");
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus("loading");
+    const res = await fetch("/api/mailing-list", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email }),
+    });
+    setStatus(res.ok ? "success" : "error");
+  };
 
   return (
     <footer className="bg-[#111111] px-6">
@@ -24,13 +35,10 @@ export default function Footer() {
           <p className="text-[#F5F1EB] font-bold text-lg">Join our mailing list</p>
           <p className="text-[#F5F1EB]/40 text-sm mt-1">Be first to receive new investment opportunities.</p>
         </div>
-        {submitted ? (
+        {status === "success" ? (
           <p className="text-[#C8A040] text-sm font-semibold">You&apos;re on the list.</p>
         ) : (
-          <form
-            className="flex gap-2 w-full md:w-auto"
-            onSubmit={(e) => { e.preventDefault(); setSubmitted(true); }}
-          >
+          <form className="flex gap-2 w-full md:w-auto" onSubmit={handleSubmit}>
             <input
               type="email"
               required
@@ -41,9 +49,10 @@ export default function Footer() {
             />
             <button
               type="submit"
-              className="px-5 py-2.5 rounded-full bg-[#C8A040] text-[#111111] text-sm font-bold hover:bg-[#b08a30] transition-colors whitespace-nowrap"
+              disabled={status === "loading"}
+              className="px-5 py-2.5 rounded-full bg-[#C8A040] text-[#111111] text-sm font-bold hover:bg-[#b08a30] transition-colors whitespace-nowrap disabled:opacity-50"
             >
-              Subscribe
+              {status === "loading" ? "..." : "Subscribe"}
             </button>
           </form>
         )}
