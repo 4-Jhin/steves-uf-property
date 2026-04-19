@@ -60,11 +60,11 @@ export default function Hero() {
         </div>
 
         {/* House graphic — overlapping the text */}
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 pointer-events-none" style={{ zIndex: 10, width: "min(90vw, 80vh, 1000px)" }}>
-          <HouseGraphic className="w-full" />
+        <div className="absolute bottom-0 left-0 right-0 pointer-events-none" style={{ zIndex: 10 }}>
+          <HouseGraphic className="w-full" style={{ height: "55vh", minHeight: "320px" }} />
         </div>
 
-        <div className="relative z-20 mt-auto px-8 pb-12 pt-[35vh] flex items-end justify-between">
+        <div className="relative z-20 mt-auto px-8 pb-12 pt-[45vh] flex items-end justify-between">
           <div className="flex flex-col gap-3 max-w-xs">
             <p className="text-xs text-[#111111]/60 leading-snug">
               Start your journey towards property investment today.
