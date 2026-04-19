@@ -20,6 +20,8 @@ export default function Hero() {
           style={{ fontSize: "clamp(2.8rem, 18vw, 5rem)", lineHeight: 0.9 }}
         >
           UF PROPERTY
+          <br />
+          GROUP
         </h1>
 
         {/* House image — full width, below the text */}
