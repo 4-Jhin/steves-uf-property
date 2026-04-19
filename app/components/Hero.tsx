@@ -29,7 +29,7 @@ export default function Hero() {
         {/* House image — overlaid on the text, top of image cuts into the heading */}
         <div
           className="absolute pointer-events-none"
-          style={{ zIndex: 10, left: 0, right: 0, bottom: 0, top: "12%" }}
+          style={{ zIndex: 10, left: 0, right: 0, bottom: 0, top: "8%" }}
         >
           <div className="relative w-full max-w-3xl mx-auto h-full">
             <Image
