@@ -50,14 +50,6 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* CTA */}
-        <Link
-          href="#contact"
-          className="hidden md:inline-flex items-center px-4 py-2 rounded-full bg-[#111111] text-[#F5F1EB] text-sm font-semibold hover:bg-[#C8A040] hover:text-[#111111] transition-colors"
-        >
-          Contact Us
-        </Link>
-
         {/* Mobile hamburger placeholder */}
         <button className="md:hidden flex flex-col gap-1.5 p-2" aria-label="Menu">
           <span className="w-5 h-0.5 bg-[#111111]" />
