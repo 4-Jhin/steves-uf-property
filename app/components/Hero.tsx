@@ -46,7 +46,7 @@ export default function Hero() {
       </div>
 
       {/* ── DESKTOP layout (hidden on mobile) ── */}
-      <div className="hidden md:flex flex-col relative pt-16" style={{ minHeight: "140vh" }}>
+      <div className="hidden md:flex flex-col min-h-screen relative pt-16">
         <p className="relative z-10 text-center text-sm font-medium tracking-widest text-[#111111]/60 uppercase mt-10 mb-2 px-4">
           North West Property Deals for Serious Investors
         </p>
@@ -64,7 +64,7 @@ export default function Hero() {
           <HouseGraphic className="w-full h-full" />
         </div>
 
-        <div className="relative z-20 mt-auto px-8 pb-8 pt-[45vh] flex items-end justify-between">
+        <div className="relative z-20 mt-auto px-8 pb-12 pt-[45vh] flex items-end justify-between">
           <div className="flex flex-col gap-3 max-w-xs">
             <p className="text-xs text-[#111111]/60 leading-snug">
               Start your journey towards property investment today.
