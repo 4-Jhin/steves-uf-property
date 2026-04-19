@@ -1,83 +1,104 @@
 export default function HouseGraphic({ className }: { className?: string }) {
   return (
     <svg
-      viewBox="0 0 600 420"
+      viewBox="0 0 700 460"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
       aria-hidden="true"
     >
       {/* Ground shadow */}
-      <ellipse cx="300" cy="410" rx="240" ry="10" fill="#111111" fillOpacity="0.06" />
+      <ellipse cx="350" cy="448" rx="280" ry="12" fill="#111111" fillOpacity="0.07" />
 
-      {/* Main body */}
-      <rect x="80" y="180" width="440" height="220" fill="#E8E4DC" />
-
-      {/* Roof */}
-      <polygon points="60,180 300,40 540,180" fill="#1A1A1A" />
-      {/* Roof trim */}
-      <polygon points="60,180 300,40 540,180" fill="none" stroke="#111111" strokeWidth="2" />
-
-      {/* Chimney */}
-      <rect x="380" y="60" width="36" height="80" fill="#2A2A2A" />
-      <rect x="374" y="55" width="48" height="10" fill="#1A1A1A" />
-
-      {/* Left wing / garage */}
-      <rect x="20" y="230" width="90" height="170" fill="#DEDAD2" />
+      {/* Left garage wing */}
+      <rect x="30" y="250" width="110" height="190" fill="#DEDAD2" />
       {/* Garage door */}
-      <rect x="28" y="290" width="74" height="110" fill="#C8C4BC" />
-      <line x1="28" y1="345" x2="102" y2="345" stroke="#AAA" strokeWidth="1.5" />
-      <line x1="28" y1="320" x2="102" y2="320" stroke="#AAA" strokeWidth="1.5" />
-      <line x1="28" y1="370" x2="102" y2="370" stroke="#AAA" strokeWidth="1.5" />
-      <line x1="65" y1="290" x2="65" y2="400" stroke="#AAA" strokeWidth="1.5" />
+      <rect x="38" y="300" width="94" height="140" fill="#C8C4BC" />
+      <line x1="38" y1="340" x2="132" y2="340" stroke="#AAAA" strokeWidth="1.5" />
+      <line x1="38" y1="320" x2="132" y2="320" stroke="#AAAA" strokeWidth="1.5" />
+      <line x1="38" y1="360" x2="132" y2="360" stroke="#AAAA" strokeWidth="1.5" />
+      <line x1="38" y1="380" x2="132" y2="380" stroke="#AAAA" strokeWidth="1.5" />
+      <line x1="85" y1="300" x2="85" y2="440" stroke="#AAAA" strokeWidth="1.5" />
 
       {/* Right extension */}
-      <rect x="490" y="240" width="90" height="160" fill="#DEDAD2" />
+      <rect x="560" y="260" width="110" height="180" fill="#DEDAD2" />
       {/* Extension window */}
-      <rect x="505" y="265" width="60" height="50" fill="#B8D4E8" fillOpacity="0.7" stroke="#999" strokeWidth="1.5" />
-      <line x1="535" y1="265" x2="535" y2="315" stroke="#999" strokeWidth="1" />
+      <rect x="578" y="285" width="74" height="60" fill="#B8D4E8" fillOpacity="0.65" stroke="#999" strokeWidth="1.5" />
+      <line x1="615" y1="285" x2="615" y2="345" stroke="#999" strokeWidth="1" />
+      <line x1="578" y1="315" x2="652" y2="315" stroke="#999" strokeWidth="1" />
+
+      {/* Main house body */}
+      <rect x="110" y="195" width="480" height="245" fill="#E8E4DC" />
+
+      {/* Chimney — left */}
+      <rect x="175" y="80" width="38" height="90" fill="#2A2A2A" />
+      <rect x="168" y="74" width="52" height="12" fill="#1A1A1A" />
+
+      {/* Chimney — right */}
+      <rect x="487" y="95" width="34" height="75" fill="#2A2A2A" />
+      <rect x="481" y="89" width="46" height="11" fill="#1A1A1A" />
+
+      {/* Main roof */}
+      <polygon points="90,195 350,42 610,195" fill="#1A1A1A" />
+
+      {/* Roof ridge detail */}
+      <line x1="90" y1="195" x2="610" y2="195" stroke="#333" strokeWidth="2" />
+
+      {/* === FIRST FLOOR WINDOWS (on wall, below roofline y=195) === */}
+      {/* Left first floor window */}
+      <rect x="140" y="215" width="85" height="65" fill="#B8D4E8" fillOpacity="0.6" stroke="#888" strokeWidth="1.5" />
+      <line x1="182" y1="215" x2="182" y2="280" stroke="#888" strokeWidth="1" />
+      <line x1="140" y1="248" x2="225" y2="248" stroke="#888" strokeWidth="1" />
+
+      {/* Centre first floor window */}
+      <rect x="307" y="210" width="86" height="65" fill="#B8D4E8" fillOpacity="0.6" stroke="#888" strokeWidth="1.5" />
+      <line x1="350" y1="210" x2="350" y2="275" stroke="#888" strokeWidth="1" />
+      <line x1="307" y1="243" x2="393" y2="243" stroke="#888" strokeWidth="1" />
+
+      {/* Right first floor window */}
+      <rect x="475" y="215" width="85" height="65" fill="#B8D4E8" fillOpacity="0.6" stroke="#888" strokeWidth="1.5" />
+      <line x1="517" y1="215" x2="517" y2="280" stroke="#888" strokeWidth="1" />
+      <line x1="475" y1="248" x2="560" y2="248" stroke="#888" strokeWidth="1" />
+
+      {/* === GROUND FLOOR === */}
+      {/* Left ground window */}
+      <rect x="130" y="310" width="100" height="80" fill="#B8D4E8" fillOpacity="0.65" stroke="#999" strokeWidth="1.5" />
+      <line x1="180" y1="310" x2="180" y2="390" stroke="#999" strokeWidth="1" />
+      <line x1="130" y1="350" x2="230" y2="350" stroke="#999" strokeWidth="1" />
+
+      {/* Right ground window */}
+      <rect x="470" y="310" width="100" height="80" fill="#B8D4E8" fillOpacity="0.65" stroke="#999" strokeWidth="1.5" />
+      <line x1="520" y1="310" x2="520" y2="390" stroke="#999" strokeWidth="1" />
+      <line x1="470" y1="350" x2="570" y2="350" stroke="#999" strokeWidth="1" />
 
       {/* Front door */}
-      <rect x="254" y="300" width="92" height="100" rx="2" fill="#1A1A1A" />
-      <rect x="260" y="306" width="36" height="50" fill="#2A2A2A" stroke="#333" strokeWidth="1" />
-      <rect x="304" y="306" width="36" height="50" fill="#2A2A2A" stroke="#333" strokeWidth="1" />
-      <rect x="260" y="362" width="80" height="32" fill="#2A2A2A" stroke="#333" strokeWidth="1" />
-      {/* Door handle */}
-      <circle cx="292" cy="357" r="4" fill="#C8A040" />
+      <rect x="300" y="310" width="100" height="130" rx="2" fill="#1A1A1A" />
+      {/* Door panels */}
+      <rect x="308" y="318" width="38" height="55" fill="#2A2A2A" stroke="#333" strokeWidth="1" />
+      <rect x="354" y="318" width="38" height="55" fill="#2A2A2A" stroke="#333" strokeWidth="1" />
+      <rect x="308" y="380" width="84" height="54" fill="#2A2A2A" stroke="#333" strokeWidth="1" />
+      {/* Gold door handle */}
+      <circle cx="338" cy="373" r="5" fill="#C8A040" />
       {/* Door arch */}
-      <path d="M254,310 Q300,270 346,310" fill="#C8A040" fillOpacity="0.15" stroke="#C8A040" strokeWidth="1.5" />
+      <path d="M300,322 Q350,278 400,322" fill="#C8A040" fillOpacity="0.12" stroke="#C8A040" strokeWidth="2" />
+      {/* Fanlight */}
+      <path d="M308,322 Q350,288 392,322" fill="none" stroke="#C8A040" strokeWidth="1" strokeDasharray="4 3" />
 
-      {/* Ground floor windows */}
-      <rect x="100" y="250" width="90" height="70" fill="#B8D4E8" fillOpacity="0.6" stroke="#999" strokeWidth="1.5" />
-      <line x1="145" y1="250" x2="145" y2="320" stroke="#999" strokeWidth="1" />
-      <line x1="100" y1="285" x2="190" y2="285" stroke="#999" strokeWidth="1" />
-
-      <rect x="410" y="250" width="90" height="70" fill="#B8D4E8" fillOpacity="0.6" stroke="#999" strokeWidth="1.5" />
-      <line x1="455" y1="250" x2="455" y2="320" stroke="#999" strokeWidth="1" />
-      <line x1="410" y1="285" x2="500" y2="285" stroke="#999" strokeWidth="1" />
-
-      {/* First floor windows */}
-      <rect x="120" y="105" width="70" height="55" fill="#B8D4E8" fillOpacity="0.5" stroke="#555" strokeWidth="1.5" />
-      <line x1="155" y1="105" x2="155" y2="160" stroke="#555" strokeWidth="1" />
-
-      <rect x="265" y="90" width="70" height="60" fill="#B8D4E8" fillOpacity="0.5" stroke="#555" strokeWidth="1.5" />
-      <line x1="300" y1="90" x2="300" y2="150" stroke="#555" strokeWidth="1" />
-
-      <rect x="410" y="105" width="70" height="55" fill="#B8D4E8" fillOpacity="0.5" stroke="#555" strokeWidth="1.5" />
-      <line x1="445" y1="105" x2="445" y2="160" stroke="#555" strokeWidth="1" />
+      {/* Front step */}
+      <rect x="288" y="438" width="124" height="10" rx="2" fill="#C8C4BC" />
 
       {/* Path */}
-      <path d="M254,400 L230,420 L370,420 L346,400 Z" fill="#C8C4BC" />
-      <line x1="300" y1="400" x2="300" y2="420" stroke="#BBB" strokeWidth="1" />
+      <path d="M300,440 L272,460 L428,460 L400,440 Z" fill="#C8C4BC" />
+      <line x1="350" y1="440" x2="350" y2="460" stroke="#BBB" strokeWidth="1" />
 
       {/* Bushes */}
-      <ellipse cx="110" cy="400" rx="40" ry="20" fill="#5A7A4A" fillOpacity="0.6" />
-      <ellipse cx="490" cy="400" rx="40" ry="20" fill="#5A7A4A" fillOpacity="0.6" />
-      <ellipse cx="150" cy="395" rx="25" ry="15" fill="#4A6A3A" fillOpacity="0.5" />
-      <ellipse cx="450" cy="395" rx="25" ry="15" fill="#4A6A3A" fillOpacity="0.5" />
+      <ellipse cx="148" cy="442" rx="44" ry="20" fill="#5A7A4A" fillOpacity="0.55" />
+      <ellipse cx="552" cy="442" rx="44" ry="20" fill="#5A7A4A" fillOpacity="0.55" />
+      <ellipse cx="192" cy="436" rx="28" ry="16" fill="#4A6A3A" fillOpacity="0.5" />
+      <ellipse cx="508" cy="436" rx="28" ry="16" fill="#4A6A3A" fillOpacity="0.5" />
 
-      {/* Ground line */}
-      <rect x="0" y="400" width="600" height="20" fill="#D8D4CC" />
+      {/* Ground */}
+      <rect x="0" y="448" width="700" height="12" fill="#D8D4CC" />
     </svg>
   );
 }

@@ -20,7 +20,7 @@ export default function Hero() {
           <br />
           GROUP
         </h1>
-        <HouseGraphic className="w-full px-4 mt-6" />
+        <HouseGraphic className="w-full mt-4" />
 
         <div className="px-6 mt-4 flex flex-col gap-3">
           <p className="text-xs text-[#111111]/60 leading-snug">
@@ -60,7 +60,7 @@ export default function Hero() {
         </div>
 
         {/* House graphic — overlapping the text */}
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 pointer-events-none" style={{ zIndex: 10, width: "min(75vw, 68vh, 820px)" }}>
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 pointer-events-none" style={{ zIndex: 10, width: "min(90vw, 80vh, 1000px)" }}>
           <HouseGraphic className="w-full" />
         </div>
 
