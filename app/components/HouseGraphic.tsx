@@ -12,15 +12,15 @@ export default function HouseGraphic({ className }: { className?: string }) {
       <rect x="0" y="455" width="1400" height="45" fill="#D8D4CC" />
 
       {/* ── GARAGE — bleeds off left edge ── */}
-      <rect x="-100" y="248" width="530" height="207" fill="#DEDAD2" />
-      <rect x="-100" y="295" width="515" height="160" fill="#C8C4BC" />
-      <line x1="-100" y1="330" x2="415" y2="330" stroke="#B0B0A8" strokeWidth="2" />
-      <line x1="-100" y1="353" x2="415" y2="353" stroke="#B0B0A8" strokeWidth="2" />
-      <line x1="-100" y1="376" x2="415" y2="376" stroke="#B0B0A8" strokeWidth="2" />
-      <line x1="-100" y1="399" x2="415" y2="399" stroke="#B0B0A8" strokeWidth="2" />
-      <line x1="-100" y1="422" x2="415" y2="422" stroke="#B0B0A8" strokeWidth="2" />
-      <line x1="158" y1="295" x2="158" y2="455" stroke="#B0B0A8" strokeWidth="2" />
-      <polygon points="-100,248 430,248 430,238 -100,238" fill="#1A1A1A" />
+      <rect x="-100" y="248" width="380" height="207" fill="#DEDAD2" />
+      <rect x="-100" y="295" width="365" height="160" fill="#C8C4BC" />
+      <line x1="-100" y1="330" x2="265" y2="330" stroke="#B0B0A8" strokeWidth="2" />
+      <line x1="-100" y1="353" x2="265" y2="353" stroke="#B0B0A8" strokeWidth="2" />
+      <line x1="-100" y1="376" x2="265" y2="376" stroke="#B0B0A8" strokeWidth="2" />
+      <line x1="-100" y1="399" x2="265" y2="399" stroke="#B0B0A8" strokeWidth="2" />
+      <line x1="-100" y1="422" x2="265" y2="422" stroke="#B0B0A8" strokeWidth="2" />
+      <line x1="83" y1="295" x2="83" y2="455" stroke="#B0B0A8" strokeWidth="2" />
+      <polygon points="-100,248 280,248 280,238 -100,238" fill="#1A1A1A" />
 
       {/* ── MAIN HOUSE BODY — shifted right ── */}
       <rect x="410" y="190" width="560" height="265" fill="#E8E4DC" />
