@@ -1,4 +1,5 @@
 import Link from "next/link";
+import HouseGraphic from "./HouseGraphic";
 
 const badges = ["BRRR", "BMV", "North West", "Value-Add"];
 
@@ -19,7 +20,9 @@ export default function Hero() {
           <br />
           GROUP
         </h1>
-        <div className="px-6 mt-10 flex flex-col gap-3">
+        <HouseGraphic className="w-full px-4 mt-6" />
+
+        <div className="px-6 mt-4 flex flex-col gap-3">
           <p className="text-xs text-[#111111]/60 leading-snug">
             Start your journey towards property investment today.
           </p>
@@ -55,7 +58,13 @@ export default function Hero() {
             UF PROPERTY
           </h1>
         </div>
-        <div className="relative z-20 mt-auto px-8 pb-12 pt-[20vh] flex items-end justify-between">
+
+        {/* House graphic — overlapping the text */}
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 pointer-events-none" style={{ zIndex: 10, width: "min(75vw, 68vh, 820px)" }}>
+          <HouseGraphic className="w-full" />
+        </div>
+
+        <div className="relative z-20 mt-auto px-8 pb-12 pt-[35vh] flex items-end justify-between">
           <div className="flex flex-col gap-3 max-w-xs">
             <p className="text-xs text-[#111111]/60 leading-snug">
               Start your journey towards property investment today.
