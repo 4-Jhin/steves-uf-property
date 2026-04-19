@@ -22,8 +22,7 @@ export async function POST(req: Request) {
     }),
     resend.contacts.create({
       email,
-      firstName: name.split(" ")[0],
-      lastName: name.split(" ").slice(1).join(" ") || undefined,
+      firstName: name,
       audienceId: process.env.RESEND_AUDIENCE_ID!,
     }),
   ]);
