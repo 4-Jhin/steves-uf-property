@@ -25,7 +25,7 @@ export default function Hero() {
         </h1>
 
         {/* House image — full width, below the text */}
-        <div className="w-full mt-4">
+        <div className="w-[130vw] -mx-[15vw] mt-4">
           <Image
             src="/house.png"
             alt="Modern investment property"
