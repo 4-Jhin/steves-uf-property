@@ -31,7 +31,7 @@ export default function Hero() {
             alt="Modern investment property"
             width={1500}
             height={1500}
-            className="w-full h-auto"
+            className="w-full h-auto grayscale"
             priority
           />
         </div>
@@ -87,7 +87,7 @@ export default function Hero() {
             alt="Modern investment property"
             width={1500}
             height={1500}
-            className="w-full h-auto"
+            className="w-full h-auto grayscale"
             priority
           />
         </div>
