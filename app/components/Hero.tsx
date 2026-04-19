@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 const badges = ["BRRR", "BMV", "North West", "Value-Add"];
@@ -9,12 +8,9 @@ export default function Hero() {
 
       {/* ── MOBILE layout (hidden on md+) ── */}
       <div className="md:hidden flex flex-col pt-20 pb-10">
-        {/* Tagline */}
         <p className="text-center text-xs font-medium tracking-widest text-[#111111]/60 uppercase mb-2 px-4">
           North West Property Deals for Serious Investors
         </p>
-
-        {/* Heading */}
         <h1
           className="font-black text-[#111111] leading-none tracking-tighter text-center px-2"
           style={{ fontSize: "clamp(2.8rem, 18vw, 5rem)", lineHeight: 0.9 }}
@@ -23,21 +19,7 @@ export default function Hero() {
           <br />
           GROUP
         </h1>
-
-        {/* House image — full width, below the text */}
-        <div className="w-[300vw] -mx-[100vw] mt-4">
-          <Image
-            src="/house.png"
-            alt="Modern investment property"
-            width={1500}
-            height={1500}
-            className="w-full h-auto grayscale"
-            priority
-          />
-        </div>
-
-        {/* CTA — below the image, no overlap */}
-        <div className="px-6 mt-6 flex flex-col gap-3">
+        <div className="px-6 mt-10 flex flex-col gap-3">
           <p className="text-xs text-[#111111]/60 leading-snug">
             Start your journey towards property investment today.
           </p>
@@ -62,12 +44,9 @@ export default function Hero() {
 
       {/* ── DESKTOP layout (hidden on mobile) ── */}
       <div className="hidden md:flex flex-col min-h-screen relative pt-16">
-        {/* Tagline */}
         <p className="relative z-10 text-center text-sm font-medium tracking-widest text-[#111111]/60 uppercase mt-10 mb-2 px-4">
           North West Property Deals for Serious Investors
         </p>
-
-        {/* Oversized brand name */}
         <div className="relative select-none px-2 leading-none text-center z-10">
           <h1
             className="font-black text-[#111111] leading-none tracking-tighter"
@@ -76,24 +55,7 @@ export default function Hero() {
             UF PROPERTY
           </h1>
         </div>
-
-        {/* House image — anchored at bottom center */}
-        <div
-          className="absolute bottom-0 left-1/2 -translate-x-1/2 pointer-events-none"
-          style={{ zIndex: 10, width: "min(180vw, 160vh)", marginBottom: "-2%" }}
-        >
-          <Image
-            src="/house.png"
-            alt="Modern investment property"
-            width={1500}
-            height={1500}
-            className="w-full h-auto grayscale"
-            priority
-          />
-        </div>
-
-        {/* Bottom row */}
-        <div className="relative z-20 mt-auto px-8 pb-12 pt-[35vh] flex items-end justify-between">
+        <div className="relative z-20 mt-auto px-8 pb-12 pt-[20vh] flex items-end justify-between">
           <div className="flex flex-col gap-3 max-w-xs">
             <p className="text-xs text-[#111111]/60 leading-snug">
               Start your journey towards property investment today.
