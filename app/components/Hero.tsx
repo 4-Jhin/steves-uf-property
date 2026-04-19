@@ -25,7 +25,7 @@ export default function Hero() {
         </h1>
 
         {/* House image — full width, below the text */}
-        <div className="w-[130vw] -mx-[15vw] mt-4">
+        <div className="w-[300vw] -mx-[100vw] mt-4">
           <Image
             src="/house.png"
             alt="Modern investment property"
@@ -80,7 +80,7 @@ export default function Hero() {
         {/* House image — anchored at bottom center */}
         <div
           className="absolute bottom-0 left-1/2 -translate-x-1/2 pointer-events-none"
-          style={{ zIndex: 10, width: "min(75vw, 68vh, 800px)", marginBottom: "-2%" }}
+          style={{ zIndex: 10, width: "min(180vw, 160vh)", marginBottom: "-2%" }}
         >
           <Image
             src="/house.png"
