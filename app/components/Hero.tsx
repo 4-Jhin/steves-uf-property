@@ -20,24 +20,18 @@ export default function Hero() {
         <div className="relative select-none px-2 leading-none text-center">
           <h1
             className="font-black text-[#111111] leading-none tracking-tighter"
-            style={{ fontSize: "clamp(3rem, 16vw, 14rem)", lineHeight: 0.9 }}
+            style={{ fontSize: "clamp(3rem, 18vw, 16rem)", lineHeight: 0.9 }}
           >
             UF PROPERTY
           </h1>
-          <h1
-            className="font-black text-[#111111] leading-none tracking-tighter"
-            style={{ fontSize: "clamp(3rem, 16vw, 14rem)", lineHeight: 0.9 }}
-          >
-            GROUP
-          </h1>
         </div>
 
-        {/* House image — overlaid on the text */}
+        {/* House image — overlaid on the text, top of image cuts into the heading */}
         <div
-          className="absolute inset-0 flex items-center justify-center pointer-events-none"
-          style={{ zIndex: 10 }}
+          className="absolute pointer-events-none"
+          style={{ zIndex: 10, left: 0, right: 0, bottom: 0, top: "18%" }}
         >
-          <div className="relative w-full max-w-2xl mx-auto" style={{ height: "70vh" }}>
+          <div className="relative w-full max-w-3xl mx-auto h-full">
             <Image
               src="/house.png"
               alt="Modern investment property"
