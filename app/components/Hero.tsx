@@ -1,5 +1,5 @@
 import Link from "next/link";
-import HouseGraphic from "./HouseGraphic";
+import Image from "next/image";
 
 const badges = ["BRRR", "BMV", "North West", "Value-Add"];
 
@@ -20,7 +20,16 @@ export default function Hero() {
           <br />
           GROUP
         </h1>
-        <HouseGraphic className="w-full mt-4" />
+        <div className="w-full mt-4 relative" style={{ aspectRatio: "3/2" }}>
+          <Image
+            src="/house.png"
+            alt="UF Property Group house"
+            fill
+            className="object-cover"
+            style={{ filter: "grayscale(100%)" }}
+            priority
+          />
+        </div>
 
         <div className="px-6 mt-4 flex flex-col gap-3">
           <p className="text-xs text-[#111111]/60 leading-snug">
@@ -59,9 +68,16 @@ export default function Hero() {
           </h1>
         </div>
 
-        {/* House graphic — overlapping the text */}
+        {/* House image — overlapping the text */}
         <div className="absolute left-0 right-0 pointer-events-none" style={{ zIndex: 10, height: "55vh", minHeight: "320px", bottom: "12%" }}>
-          <HouseGraphic className="w-full h-full" />
+          <Image
+            src="/house.png"
+            alt="UF Property Group house"
+            fill
+            className="object-cover"
+            style={{ filter: "grayscale(100%)" }}
+            priority
+          />
         </div>
 
         <div className="absolute bottom-0 left-0 right-0 z-20 px-8 pb-8 flex items-end justify-between">
