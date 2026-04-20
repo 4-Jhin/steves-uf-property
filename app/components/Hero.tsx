@@ -68,13 +68,13 @@ export default function Hero() {
           </h1>
         </div>
 
-        {/* House image — overlapping the text */}
-        <div className="absolute left-0 right-0 pointer-events-none" style={{ zIndex: 10, height: "55vh", minHeight: "320px", bottom: "12%" }}>
+        {/* House image — starts just below heading, fills remaining space */}
+        <div className="flex-1 relative min-h-0 pointer-events-none">
           <Image
             src="/house.png"
             alt="UF Property Group house"
             fill
-            className="object-cover"
+            className="object-cover object-top"
             style={{ filter: "grayscale(100%)" }}
             priority
           />
