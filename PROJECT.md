@@ -37,8 +37,8 @@ Landing page for UF Property Group, a North West England property investment and
 app/
   components/
     Navbar.tsx        — Sticky nav, hamburger mobile menu, Join button
-    Hero.tsx          — Oversized "UF PROPERTY" heading, SVG house scene, CTA
-    HouseGraphic.tsx  — Custom SVG house illustration (garage left, trees right)
+    Hero.tsx          — Oversized "UF PROPERTY" heading, house photo, CTA
+    HouseGraphic.tsx  — Custom SVG house illustration (garage left, trees right) — no longer used in Hero
     About.tsx         — Two-column brand description
     HowItWorks.tsx    — 3-step numbered process
     DealTypes.tsx     — 4 deal type cards (BRRR, BMV, Value-Add, Cashflow)
@@ -52,14 +52,14 @@ app/
   layout.tsx          — Root layout, fonts, Speed Insights, Analytics
   globals.css         — Tailwind theme + CSS custom properties
 public/
-  house.png           — House image (currently unused, SVG used instead)
+  house.png           — House photo used in Hero (black & white filter applied via CSS grayscale)
 ```
 
 ---
 
 ## Page Section Order
 1. Navbar
-2. Hero (UF PROPERTY heading + house SVG + CTA)
+2. Hero (UF PROPERTY heading + house photo B&W + CTA)
 3. About
 4. How It Works
 5. Deal Types
@@ -101,7 +101,25 @@ Vercel picks up the push and auto-deploys. No manual steps needed.
 ---
 
 ## Known Considerations
-- The SVG house scene (HouseGraphic.tsx) has the garage bleeding off the left edge and trees bleeding off the right — this is intentional
+- The SVG house scene (HouseGraphic.tsx) is no longer used in the Hero — it still exists in the codebase but can be deleted if not needed elsewhere
 - Mobile and desktop hero layouts are completely separate (`md:hidden` / `hidden md:flex`) to avoid overlap issues
+- Desktop hero uses flex flow so the house image starts directly below the heading; `object-top` ensures the top of the image is always visible
 - The contact form is wired to Resend but has no custom domain yet — emails send from `onboarding@resend.dev`
 - Future: add a custom domain in Resend to send from a branded address (e.g. `hello@ufpropertygroup.co.uk`)
+
+---
+
+## Custom Domain Setup (Squarespace → Vercel)
+Domain purchased via Squarespace. To connect:
+1. Vercel project → Settings → Domains → add the domain
+2. In Squarespace → Domains → DNS Settings, add:
+   - **A record:** `@` → `76.76.21.21`
+   - **CNAME record:** `www` → `cname.vercel-dns.com`
+3. Remove any existing Squarespace A/CNAME records that conflict
+4. Vercel auto-issues SSL once DNS propagates (up to 48h, usually faster)
+
+---
+
+## Git Setup
+- Remote uses a PAT stored in `.git/config` for push access
+- Commit email: `steveufuoma505@gmail.com` (set at project level)
